@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02F74BE7-80F2-422C-9D61-B72B382E92F2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>A19_Ex03_Alexey_332338060_Yevgeny_324759737</RootNamespace>
+    <AssemblyName>A19 Ex03 Alexey 332338060 Yevgeny 324759737</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Journey\DealDetailsExtensionAttribute.cs" />
+    <Compile Include="System\FillCollectionStrategy.cs" />
+    <Compile Include="Interfaces\IAggregate.cs" />
+    <Compile Include="Interfaces\IDescribable.cs" />
+    <Compile Include="Interfaces\IPaneL.cs" />
+    <Compile Include="Interfaces\IValuable.cs" />
+    <Compile Include="Iterator\CollectionIterator.cs" />
+    <Compile Include="Iterator\FollowerIterator.cs" />
+    <Compile Include="Iterator\PhotoIterator.cs" />
+    <Compile Include="Iterator\PostedItemIterator.cs" />
+    <Compile Include="Iterator\PostIterator.cs" />
+    <Compile Include="GUI\DealDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\DealDetails.designer.cs">
+      <DependentUpon>DealDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Journey\HotJourney.cs" />
+    <Compile Include="Journey\HotJourneyOperator.cs" />
+    <Compile Include="Journey\HotJourneyPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Journey\HotJourneyPanel.designer.cs">
+      <DependentUpon>HotJourneyPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Journey\Journey.cs" />
+    <Compile Include="Journey\PilgrimagePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Journey\PilgrimagePanel.designer.cs">
+      <DependentUpon>PilgrimagePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Journey\PilgrimageTourOperator.cs" />
+    <Compile Include="Journey\PilgrimageTrip.cs" />
+    <Compile Include="Journey\Serializator.cs" />
+    <Compile Include="Journey\Ticket.cs" />
+    <Compile Include="Journey\TourOperator.cs" />
+    <Compile Include="System\LastAppSession.cs" />
+    <Compile Include="GUI\LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Menu.cs" />
+    <Compile Include="Menu\MenuItem.cs" />
+    <Compile Include="Modified Posted Items Facade\ModifiedPhoto.cs" />
+    <Compile Include="Modified Posted Items Facade\ModifiedPost.cs" />
+    <Compile Include="Modified Posted Items Facade\ModifiedPostedItems.cs" />
+    <Compile Include="System\Operator.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="GUI\ProgramMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ProgramMenu.Designer.cs">
+      <DependentUpon>ProgramMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TopFiveItems\Follower.cs" />
+    <Compile Include="TopFiveItems\KthMinOrMaxElement.cs" />
+    <Compile Include="System\TopListFacade.cs" />
+    <Compile Include="System\TypeSearchEngine.cs" />
+    <Compile Include="GUI\UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UI.Designer.cs">
+      <DependentUpon>UI.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Facebook">
+      <HintPath>Resources\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="FbGraphApiWrapper">
+      <HintPath>Resources\FbGraphApiWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\DealDetails.resx">
+      <DependentUpon>DealDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Journey\HotJourneyPanel.resx">
+      <DependentUpon>HotJourneyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Journey\PilgrimagePanel.resx">
+      <DependentUpon>PilgrimagePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProgramMenu.resx">
+      <DependentUpon>ProgramMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UI.resx">
+      <DependentUpon>UI.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DestinationCountries.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook_login.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading_icon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OriginsCountries.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook_logout_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook-login.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
